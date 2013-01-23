@@ -1,16 +1,7 @@
-<%= form_for(@training) do |f| %>
-  <% if @training.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@training.errors.count, "error") %> prohibited this training from being saved:</h2>
+<%= simple_form_for(@training) do |f| %>
 
-      <ul>
-      <% @training.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
+  <%= f.input :name %>
+  <%= f.association :user_groups, :collection => @user_groups, :as => :check_boxes %>
   <div class="actions">
     <%= f.submit %>
   </div>
