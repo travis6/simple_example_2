@@ -25,6 +25,7 @@ class TrainingsController < ApplicationController
   # GET /trainings/new.json
   def new
     @training = Training.new
+    @user_groups = UserGroup.all
 
     respond_to do |format|
       format.html # new.html.erb
