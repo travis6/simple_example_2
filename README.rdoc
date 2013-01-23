@@ -14,7 +14,7 @@ ActiveRecord::StatementInvalid in TrainingsController#create
 SQLite3::ConstraintException: constraint failed: INSERT INTO "assignments" ("created_at", "group_id", "training_id", "updated_at") VALUES (?, ?, ?, ?)
 
 
-This is the result of trying to save training_id as nil in the database but only happens past rails 3.2.8.
+This is the result of trying to save training_id as nil in the assignments table but only happens past rails 3.2.8.
 
 I originally ran into this problem on an app I upgraded to rails 3.2.11 from 3.2.8.
 
