@@ -1,7 +1,7 @@
 <%= simple_form_for(@training) do |f| %>
 
   <%= f.input :name %>
-  <%= f.association :user_groups, :collection => @user_groups, :as => :check_boxes %>
+  <%= f.association :groups, :collection => @groups, :as => :check_boxes %>
   <div class="actions">
     <%= f.submit %>
   </div>
